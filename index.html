@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>熊晏霆_Oliver_Hsiung_履歷</title>
+<meta name="description" content="熊晏霆 Oliver Hsiung｜數位行銷、AI 協作、網站與互動原型、SEO／GEO、數位專案統籌">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #1b2230;
+    --ink-2: #444d5c;
+    --ink-3: #6b7383;
+    --line: #dfe3ea;
+    --paper: #ffffff;
+    --bg: #eef0f3;
+    --accent: #1f4e79;
+    --accent-soft: #eaf1f8;
+    --sans: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", "Heiti TC", sans-serif;
+    --serif: "Noto Serif TC", "PMingLiU", "Songti TC", serif;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 14.5px;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ---------- Toolbar ---------- */
+  .toolbar {
+    position: sticky; top: 0; z-index: 10;
+    display: flex; justify-content: flex-end; align-items: center; gap: 12px;
+    max-width: 920px; margin: 0 auto; padding: 14px 0;
+  }
+  .toolbar .hint { color: var(--ink-3); font-size: 12.5px; }
+  .btn {
+    appearance: none; border: 1px solid var(--accent); background: var(--accent); color: #fff;
+    font: 500 14px/1 var(--sans); letter-spacing: .04em;
+    padding: 11px 20px; border-radius: 6px; cursor: pointer;
+    box-shadow: 0 1px 2px rgba(16,24,40,.08);
+    transition: background .15s ease, transform .05s ease;
+  }
+  .btn:hover { background: #173d61; }
+  .btn:active { transform: translateY(1px); }
+  .btn:focus-visible { outline: 3px solid #9fc0e3; outline-offset: 2px; }
+
+  /* ---------- Page ---------- */
+  .page {
+    max-width: 920px; margin: 0 auto 64px; background: var(--paper);
+    box-shadow: 0 1px 3px rgba(16,24,40,.06), 0 12px 32px rgba(16,24,40,.06);
+    border-radius: 4px; overflow: hidden;
+  }
+
+  /* ---------- Header ---------- */
+  header.hero {
+    display: grid; grid-template-columns: 1fr 132px; gap: 32px; align-items: center;
+    padding: 48px 56px 36px;
+    border-top: 6px solid var(--accent);
+  }
+  .name { margin: 0; font-family: var(--serif); font-weight: 700; font-size: 34px; letter-spacing: .06em; line-height: 1.25; }
+  .name .en { display: block; font-family: var(--sans); font-weight: 500; font-size: 15px; letter-spacing: .22em; color: var(--ink-3); text-transform: uppercase; margin-top: 6px; }
+  .headline { margin: 16px 0 0; font-size: 15px; font-weight: 500; color: var(--accent); letter-spacing: .03em; }
+  .contact { margin: 14px 0 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 13.5px; color: var(--ink-2); }
+  .contact b { font-weight: 500; color: var(--ink-3); margin-right: 6px; font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+  .contact a { color: inherit; text-decoration: none; border-bottom: 1px solid var(--line); }
+  .contact a:hover { color: var(--accent); border-color: var(--accent); }
+
+  .photo {
+    width: 132px; height: 164px; border-radius: 4px; overflow: hidden;
+    background: var(--accent-soft); display: grid; place-items: center;
+    border: 1px solid var(--line);
+  }
+  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo .initials { font-family: var(--serif); font-size: 36px; color: var(--accent); letter-spacing: .08em; }
+
+  .summary {
+    margin: 0 56px; padding: 18px 22px; background: var(--accent-soft);
+    border-left: 3px solid var(--accent); color: var(--ink); font-size: 15px; line-height: 1.8;
+  }
+
+  .stats {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    margin: 28px 56px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  }
+  .stat { padding: 16px 12px; text-align: center; }
+  .stat + .stat { border-left: 1px solid var(--line); }
+  .stat .num { font-family: var(--serif); font-size: 24px; font-weight: 700; color: var(--accent); line-height: 1.2; font-variant-numeric: tabular-nums; }
+  .stat .num small { font-size: 14px; margin-left: 2px; }
+  .stat .lbl { font-size: 12.5px; color: var(--ink-3); margin-top: 4px; }
+
+  /* ---------- Sections ---------- */
+  main { padding: 12px 56px 52px; }
+  section.block {
+    display: grid; grid-template-columns: 128px 1fr; gap: 28px;
+    padding: 30px 0 4px; border-bottom: 1px solid var(--line);
+  }
+  section.block:last-child { border-bottom: 0; }
+  .block > h2 {
+    margin: 0; font-size: 14px; font-weight: 700; letter-spacing: .18em; color: var(--accent);
+    line-height: 1.6; position: relative; padding-top: 2px;
+  }
+  .block > h2 .en { display: block; font-size: 10.5px; font-weight: 500; letter-spacing: .2em; color: var(--ink-3); text-transform: uppercase; margin-top: 2px; }
+  .block-body > :first-child { margin-top: 0; }
+  p { margin: 0 0 14px; color: var(--ink-2); text-align: justify; }
+
+  /* Skills */
+  .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 14px 28px; margin-bottom: 22px; }
+  .skill h3 { margin: 0 0 2px; font-size: 14.5px; font-weight: 700; color: var(--ink); }
+  .skill p { margin: 0; font-size: 13.5px; line-height: 1.7; text-align: left; }
+
+  /* Entries */
+  .entry { margin-bottom: 24px; }
+  .entry-head, ul.points li, .skill { break-inside: avoid; page-break-inside: avoid; }
+  .entry-head { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  .entry h3 { margin: 0; font-size: 15.5px; font-weight: 700; color: var(--ink); line-height: 1.5; }
+  .entry .org { color: var(--ink-2); font-weight: 500; }
+  .entry .date { font-size: 13px; color: var(--ink-3); white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .entry .meta { margin: 2px 0 8px; font-size: 13px; color: var(--ink-3); }
+  .tag { display: inline-block; font-size: 11.5px; font-weight: 500; letter-spacing: .05em; color: var(--accent); border: 1px solid #c5d6e8; border-radius: 3px; padding: 0 7px; margin-left: 8px; vertical-align: 2px; line-height: 1.7; }
+  ul.points { margin: 6px 0 0; padding: 0; list-style: none; }
+  ul.points li { position: relative; padding-left: 16px; margin: 0 0 5px; color: var(--ink-2); }
+  ul.points li::before { content: ""; position: absolute; left: 2px; top: .78em; width: 5px; height: 5px; background: var(--accent); border-radius: 50%; }
+  ul.points li strong { color: var(--ink); font-weight: 700; }
+
+  /* Tools */
+  dl.tools { margin: 0 0 22px; display: grid; grid-template-columns: 112px 1fr; gap: 8px 18px; }
+  dl.tools dt { font-weight: 700; font-size: 13.5px; color: var(--ink); }
+  dl.tools dd { margin: 0; font-size: 13.5px; color: var(--ink-2); }
+
+  .edu { display: grid; grid-template-columns: 1fr auto; gap: 6px 18px; margin-bottom: 22px; }
+  .edu .k { font-weight: 700; }
+  .edu .v { color: var(--ink-3); font-size: 13px; text-align: right; }
+
+  footer.note { text-align: center; color: var(--ink-3); font-size: 12px; padding: 0 0 40px; }
+
+  /* ---------- Responsive ---------- */
+  @media screen and (max-width: 760px) {
+    .toolbar { padding: 12px 16px; }
+    .toolbar .hint { display: none; }
+    .page { border-radius: 0; }
+    header.hero { grid-template-columns: 1fr; padding: 32px 22px 24px; gap: 20px; }
+    .photo { order: -1; width: 104px; height: 130px; }
+    .summary { margin: 0 22px; }
+    .stats { margin: 22px 22px 0; grid-template-columns: repeat(2, 1fr); }
+    .stat:nth-child(3) { border-left: 0; }
+    .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+    main { padding: 4px 22px 36px; }
+    section.block { grid-template-columns: 1fr; gap: 12px; }
+    .skills { grid-template-columns: 1fr; }
+    dl.tools { grid-template-columns: 1fr; gap: 2px; }
+    dl.tools dd { margin-bottom: 8px; }
+  }
+
+  /* ---------- Print / PDF ---------- */
+  @page { size: A4; margin: 14mm 13mm 14mm; }
+  @media print {
+    html, body { background: #fff; }
+    body { font-size: 10pt; line-height: 1.6; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .toolbar, footer.note { display: none !important; }
+    .page { max-width: none; margin: 0; box-shadow: none; border-radius: 0; }
+    header.hero { padding: 0 0 18px; border-top: 0; grid-template-columns: 1fr 96px; gap: 20px; }
+    .name { font-size: 22pt; }
+    .name .en { font-size: 10pt; }
+    .headline { font-size: 10.5pt; margin-top: 10px; }
+    .contact { font-size: 9.5pt; margin-top: 8px; }
+    .contact a { border-bottom: 0; }
+    .photo { width: 96px; height: 120px; }
+    .summary { margin: 0; padding: 10px 14px; font-size: 10pt; }
+    .stats { margin: 14px 0 0; }
+    .stat { padding: 9px 6px; }
+    .stat .num { font-size: 15pt; }
+    .stat .lbl { font-size: 8.5pt; }
+    main { padding: 0; }
+    section.block { grid-template-columns: 84px 1fr; gap: 16px; padding: 16px 0 2px; }
+    .block > h2 { font-size: 10pt; }
+    .block > h2 .en { font-size: 7.5pt; }
+    p { margin-bottom: 8px; }
+    .skills { gap: 8px 20px; margin-bottom: 12px; }
+    .skill h3 { font-size: 10pt; }
+    .skill p, dl.tools dt, dl.tools dd { font-size: 9.5pt; }
+    .entry { margin-bottom: 13px; }
+    .entry h3 { font-size: 10.5pt; }
+    .entry .date, .entry .meta { font-size: 9pt; }
+    ul.points li { margin-bottom: 2px; }
+    dl.tools { grid-template-columns: 82px 1fr; gap: 4px 14px; margin-bottom: 12px; }
+    .edu { margin-bottom: 8px; }
+    h2, h3, .entry-head, .meta { break-after: avoid; page-break-after: avoid; }
+    .stats { grid-template-columns: repeat(4, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar">
+  <span class="hint">在列印視窗中將「目的地」設為「另存為 PDF」</span>
+  <button class="btn" type="button" id="pdfBtn">下載 PDF</button>
+</div>
+
+<article class="page">
+  <header class="hero">
+    <div>
+      <h1 class="name">熊晏霆<span class="en">Oliver Hsiung</span></h1>
+      <p class="headline">數位行銷｜AI 協作｜網站與互動原型｜SEO／GEO｜數位專案統籌</p>
+      <ul class="contact">
+        <li><b>Email</b><a href="mailto:oliver.hsiung.827@gmail.com">oliver.hsiung.827@gmail.com</a></li>
+        <!-- 作品集：有網址後，取消下一行的註解並填入網址
+        <li><b>Portfolio</b><a href="https://" id="portfolio">網址</a></li>
+        -->
+      </ul>
+    </div>
+    <div class="photo">
+      <!-- 大頭照：將照片存為同資料夾的 photo.jpg -->
+      <img src="photo.jpg" alt="熊晏霆大頭照" onerror="this.remove(); document.querySelector('.photo').innerHTML='<span class=&quot;initials&quot;>OH</span>';">
+    </div>
+  </header>
+
+  <div class="summary">
+    從使用者洞察出發，用 AI 把想法做成可以操作的原型，再一路帶到上線。數位行銷 8 年，經手飯店、OTT 影音、餐飲、家電與淨水品牌。
+  </div>
+
+  <div class="stats" aria-label="重點成果">
+    <div class="stat"><div class="num">8<small>年</small></div><div class="lbl">數位行銷經驗</div></div>
+    <div class="stat"><div class="num">605<small>萬</small></div><div class="lbl">品牌路跑全案總觸及</div></div>
+    <div class="stat"><div class="num">2.6<small>倍</small></div><div class="lbl">LINE OA 好友成長</div></div>
+    <div class="stat"><div class="num">25,000</div><div class="lbl">飯店會員人數</div></div>
+  </div>
+
+  <main>
+    <section class="block">
+      <h2>自傳<span class="en">Profile</span></h2>
+      <div class="block-body">
+        <p>我是熊晏霆 Oliver。我個性開朗，喜歡和人相處，在團隊裡常常是帶動氣氛的人。但我做事很龜毛，文案裡一個錯字、報表上兩個對不起來的數字，我都會抓出來。所以在專案裡，我既能把大家拉在一起，也能當最後把關的人。</p>
+        <p>目前我在上洋產業擔任數位行銷股長，每天做的是數位行銷的基本功：規劃線上與線下活動、投放 Google 和 Meta 廣告、用 GA4 和 GSC 分析成效、經營 FB／IG／YouTube 社群、洽談 KOL 合作、監測網路口碑，也經營 LINE 官方帳號和會員。我習慣用數據說話，看的是實際轉換，而不只是曝光和點擊。</p>
+        <p>我對新工具很好奇，遇到重複的工作，總想找更聰明的方法。這讓我在本業之外多了一項加分能力：我會用 AI 協作寫程式（vibe coding），自己做網站、互動原型和小工具，也能自己動手做 SEO 與 GEO。有了 AI，我一個人就能把想法一路做到上線。龜毛的個性也讓我不會盲目相信 AI，每一份交出去的東西，我都會自己再確認一次。</p>
+        <p>我很在意使用者真正卡在哪裡，也擅長當溝通的橋樑，不論是行銷和工程師之間，還是業主和廠商之間。接下來，我希望把這些能力結合起來，幫團隊把事情做得更快、更好。</p>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>核心能力<span class="en">Expertise</span></h2>
+      <div class="block-body">
+        <div class="skills">
+          <div class="skill"><h3>使用者洞察</h3><p>找出使用者卡在哪、在怕什麼，用洞察決定專案方向，而不是先決定要做什麼素材</p></div>
+          <div class="skill"><h3>AI 協作與 Vibe Coding</h3><p>用 AI 寫程式，做出互動原型、小工具、自動回覆程式；資料整理與研究也用 AI 先跑一輪，再由我把關</p></div>
+          <div class="skill"><h3>網站全案</h3><p>需求企劃、Sitemap、素材統籌、HTML/CSS 上稿、部署、網域設定、資安修補</p></div>
+          <div class="skill"><h3>SEO／GEO</h3><p>自己排查索引問題、調整 meta 與內容結構，並針對 Google AI Overviews 優化品牌在 AI 搜尋中的呈現</p></div>
+          <div class="skill"><h3>影像與內容</h3><p>品牌形象影片企劃、腳本、拍攝統籌與剪輯；廣告與社群文案</p></div>
+          <div class="skill"><h3>數位專案與廠商管理</h3><p>廠商評選、規格撰寫、進度控管、驗收；扮演行銷與工程端之間的橋樑</p></div>
+          <div class="skill"><h3>數據與 CRM</h3><p>GA4、GTM、GSC、Looker Studio、廣告成效分析；會員分眾、LINE OA 經營、口碑監測</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>代表專案<span class="en">Projects</span></h2>
+      <div class="block-body">
+        <div class="entry">
+          <div class="entry-head">
+            <h3>三菱重工空調「一起跑上太空」品牌路跑系列</h3>
+            <span class="date">2026</span>
+          </div>
+          <ul class="points">
+            <li>把「技術源自航太」的品牌賣點做成太空主題的跑步任務，辦了一系列線下跑聚，包括微醺無重力日、炸雞派對和中部場，<strong>報名開放不到 4 小時就額滿</strong>。</li>
+            <li>延伸成全台線上路跑。使用者用 LINE 登入、連結 Strava 後，里程會自動同步。活動設計了里程任務、全台 2,000 多個 JETFLOW 能量點、倍數任務、三個排行榜和四種抽獎池。</li>
+            <li>我負責規則設計、廠商開發與驗收，抓出規則矛盾和刷里程的漏洞，並補上防弊機制。也規劃 LINE 圖文選單、chatbot 和分眾推播，讓使用者從報名、連結帳號到持續參與都不中斷。</li>
+            <li>全案<strong>總觸及約 605 萬</strong>，其中包含 17 則 KOL 貼文。</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>可菱水 Cleansui「AI 診療室」<span class="tag">Vibe Coding</span></h3>
+          </div>
+          <ul class="points">
+            <li>使用者留言說出生活中的煩惱，AI 會產出一份幽默的「診療報告」，最後推薦適合的淨水產品。</li>
+            <li>我規劃了互動流程和分支，並用 AI 協作寫出串接 FB Graph API 與 AI API 的自動回覆程式（Node.js）。</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>可菱水日本原廠形象影片企劃</h3>
+          </div>
+          <ul class="points">
+            <li>統籌腳本分工、影片規格與版本、KOL 合作條件、授權期間和拍攝行程。</li>
+            <li>拍攝前先查證要拍的醫院案例，發現 AI 摘要編造的資訊並修正，避免錯誤宣稱進到影片裡。</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>網站、SEO 與互動工具</h3>
+          </div>
+          <ul class="points">
+            <li>自己製作三菱重工除濕機產品頁和 AQUA 首賣活動頁，活動辦法用 popup 收進頁面，另外還有輪播 Banner。</li>
+            <li>用 Cloudflare 部署網站並切換網域，補上 HSTS 等資安標頭，也在網站委外合約加上弱點掃描與第三方元件清冊條款。</li>
+            <li>活動網站因為 noindex 設定沒辦法被搜尋引擎收錄，我自己找出原因並修好，再到 Search Console 重新提交。</li>
+            <li>做了客製化玻璃杯預覽工具，使用者上傳圖案就能即時合成到杯身，看到成品效果。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>工作經歷<span class="en">Experience</span></h2>
+      <div class="block-body">
+        <div class="entry">
+          <div class="entry-head">
+            <h3>數位行銷股長<span class="org">｜上洋產業股份有限公司</span></h3>
+            <span class="date">2023/11 – 至今</span>
+          </div>
+          <div class="meta">負責品牌：三菱重工空調、日本可菱水 Cleansui、AQUA 空調、RIV 精緻洗衣</div>
+          <ul class="points">
+            <li><strong>整合行銷：</strong>規劃年度數位行銷活動和線上、線下活動，從議題設定、創意發想到執行。</li>
+            <li><strong>網站與 AI：</strong>網站全案統籌、HTML/CSS 上稿；用 AI vibe coding 製作互動原型和工具。</li>
+            <li><strong>SEO／GEO：</strong>執行 SEO 與 GEO，針對 Google AI Overviews 優化內容結構。</li>
+            <li><strong>廣告與數據：</strong>投放 Google 和 Meta 廣告，用 GA4、GSC 追蹤成效，並用 Looker Studio 製作報表。在 RIV 專案中，把廣告目標從點擊改成預約轉換，並加上 UTM 追蹤。</li>
+            <li><strong>社群與口碑：</strong>經營 FB、IG、YouTube，並用 KEYPO 監測網路口碑。</li>
+            <li><strong>LINE 官方帳號：</strong>好友從 4,410 人成長到 11,648 人（2025/7 起），封鎖率維持在 4.6% 左右。</li>
+            <li><strong>專案管理：</strong>評選、溝通、驗收網站公司和系統商；把行銷需求轉成工程師可以直接執行的技術規格。</li>
+            <li><strong>合作與影像：</strong>洽談 KOL／KOC 合作並追蹤成效；企劃影片腳本並統籌執行；推動品牌異業合作。</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>企業推廣組主任<span class="org">｜安心食品服務股份有限公司</span></h3>
+            <span class="date">2022/07 – 2023/07</span>
+          </div>
+          <ul class="points">
+            <li>開發企業客戶、規劃線下活動與藝文空間展覽。</li>
+            <li>推廣品牌 App，負責數位廣告投放與 GA 分析。</li>
+            <li>企劃社群內容與影片腳本，編列並執行部門預算。</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>行銷主任<span class="org">｜Just Kitchen 軒饌廚坊股份有限公司</span></h3>
+            <span class="date">2022/03 – 2022/05</span>
+          </div>
+          <ul class="points">
+            <li>規劃並撰寫 LINE OA chatbot 腳本，運用標籤功能做精準行銷。</li>
+            <li>執行線下活動，例如 Vogue 野餐日；負責官網營運與改版規劃。</li>
+            <li>投放廣告、拍攝剪輯影音、洽談 KOL 合作。</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>數位行銷專案經理<span class="org">｜統一佳佳股份有限公司</span></h3>
+            <span class="date">2021/09 – 2022/03</span>
+          </div>
+          <ul class="points">
+            <li>統籌 OTT 運動影音平台 App 專案，整合各單位意見並規劃整體行銷。</li>
+            <li>建置並管理攝影棚，規劃直播節目製作。</li>
+            <li>負責廣告投放、廣告交換與網路聲量經營。</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>數位行銷<span class="org">｜台北美福大飯店</span></h3>
+            <span class="date">2019/12 – 2021/09</span>
+          </div>
+          <ul class="points">
+            <li>會員人數從 9,000 人成長到 <strong>25,000 人</strong>，LINE OA 從 20,000 人成長到 <strong>35,000 人</strong>。</li>
+            <li>把線下顧客導流到線上，綁定官方會員系統，整合線上與線下的會員資料。</li>
+            <li>分析會員消費習慣，做分眾行銷；也負責競品分析、廣告投放、官網營運和影音製作。</li>
+          </ul>
+        </div>
+
+        <div class="entry">
+          <div class="entry-head">
+            <h3>影片企劃行銷<span class="org">｜詠緁生物科技有限公司</span></h3>
+            <span class="date">2018/07 – 2019/12</span>
+          </div>
+          <ul class="points">
+            <li>制定產品策略和目標客群行銷企劃，並負責影片企劃、拍攝與剪輯。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>工具<span class="en">Toolkit</span></h2>
+      <div class="block-body">
+        <dl class="tools">
+          <dt>AI 與開發</dt><dd>Claude、AI vibe coding、HTML/CSS、Node.js、VS Code、Cloudflare Pages/Workers、MCP</dd>
+          <dt>數據與廣告</dt><dd>GA4、GTM、Google Search Console、Looker Studio、Google Ads、Meta 廣告、KEYPO</dd>
+          <dt>CRM 與社群</dt><dd>LINE OA（chatbot、圖文選單、分眾推播）、ManyChat、FB／IG／YouTube</dd>
+          <dt>設計與影像</dt><dd>Photoshop、Illustrator、Premiere、After Effects、Spark AR</dd>
+          <dt>文書</dt><dd>Word、PowerPoint、Excel</dd>
+        </dl>
+      </div>
+    </section>
+
+    <section class="block">
+      <h2>學歷與語言<span class="en">Education</span></h2>
+      <div class="block-body">
+        <div class="edu">
+          <div><span class="k">中國文化大學</span>　大眾傳播學系</div><div class="v">2005 – 2009</div>
+          <div><span class="k">英文</span>　中階</div><div class="v"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+</article>
+
+<footer class="note">最後更新：2026 年 11 月</footer>
+
+<script>
+  document.getElementById('pdfBtn').addEventListener('click', function () {
+    // 檔名會使用 <title>：熊晏霆_Oliver_Hsiung_履歷.pdf
+    window.print();
+  });
+</script>
+</body>
+</html>
