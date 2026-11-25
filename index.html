@@ -3,8 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>熊晏霆_Oliver_Hsiung_履歷</title>
-<meta name="description" content="熊晏霆 Oliver Hsiung｜數位行銷、AI 協作、網站與互動原型、SEO／GEO、數位專案統籌">
+<title>熊晏霆 Oliver Hsiung｜數位行銷・AI 協作 履歷</title>
+<meta name="description" content="熊晏霆 Oliver Hsiung，數位行銷 8 年，專長 AI 協作與 Vibe Coding、網站與互動原型、SEO／GEO 與數位專案統籌，經手飯店、OTT 影音、餐飲、家電與淨水品牌。">
+<meta name="author" content="熊晏霆 Oliver Hsiung">
+
+<!-- 不讓搜尋引擎索引（Google、Bing 等）。注意：不要用 robots.txt 封鎖，否則爬蟲讀不到這個 noindex -->
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+
+<link rel="canonical" href="https://oliverhsiung827.github.io/resume/">
+<meta name="theme-color" content="#1f4e79">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231f4e79'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' font-weight='700' fill='%23fff' text-anchor='middle'%3EOH%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="photo.png">
+
+<!-- Open Graph（Facebook、LINE、LinkedIn、Slack 等分享預覽） -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="熊晏霆 Oliver Hsiung">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:url" content="https://oliverhsiung827.github.io/resume/">
+<meta property="og:title" content="熊晏霆 Oliver Hsiung｜數位行銷・AI 協作 履歷">
+<meta property="og:description" content="數位行銷 8 年。從使用者洞察出發，用 AI 把想法做成可以操作的原型，再一路帶到上線。">
+<meta property="og:image" content="https://oliverhsiung827.github.io/resume/og-image.png">
+<meta property="og:image:secure_url" content="https://oliverhsiung827.github.io/resume/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="熊晏霆 Oliver Hsiung 履歷：數位行銷、AI 協作、網站與互動原型">
+<meta property="profile:first_name" content="晏霆">
+<meta property="profile:last_name" content="熊">
+<meta property="profile:username" content="oliverhsiung827">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="熊晏霆 Oliver Hsiung｜數位行銷・AI 協作 履歷">
+<meta name="twitter:description" content="數位行銷 8 年。從使用者洞察出發，用 AI 把想法做成可以操作的原型，再一路帶到上線。">
+<meta name="twitter:image" content="https://oliverhsiung827.github.io/resume/og-image.png">
+<meta name="twitter:image:alt" content="熊晏霆 Oliver Hsiung 履歷：數位行銷、AI 協作、網站與互動原型">
+
+<!-- 結構化資料 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "url": "https://oliverhsiung827.github.io/resume/",
+  "inLanguage": "zh-Hant",
+  "dateModified": "2026-11-25",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "熊晏霆",
+    "alternateName": "Oliver Hsiung",
+    "jobTitle": "數位行銷股長",
+    "worksFor": { "@type": "Organization", "name": "上洋產業股份有限公司" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "中國文化大學" },
+    "email": "mailto:oliver.hsiung.827@gmail.com",
+    "image": "https://oliverhsiung827.github.io/resume/photo.png",
+    "knowsAbout": ["數位行銷", "AI 協作", "Vibe Coding", "SEO", "GEO", "AIO", "GA4", "LINE 官方帳號", "數位專案管理"],
+    "knowsLanguage": ["zh-Hant", "en"]
+  }
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet">
@@ -214,7 +271,7 @@
       </ul>
     </div>
     <div class="photo">
-      <img src="photo.png" alt="熊晏霆大頭照" onerror="this.remove(); document.querySelector('.photo').innerHTML='<span class=&quot;initials&quot;>OH</span>';">
+      <img src="photo.png" width="360" height="360" alt="熊晏霆大頭照" onerror="this.remove(); document.querySelector('.photo').innerHTML='<span class=&quot;initials&quot;>OH</span>';">
     </div>
   </header>
 
@@ -411,7 +468,13 @@
 
 <script>
   document.getElementById('pdfBtn').addEventListener('click', function () {
-    // 檔名會使用 <title>：熊晏霆_Oliver_Hsiung_履歷.pdf
+    // 瀏覽器會用 <title> 當 PDF 檔名，列印時暫時換成乾淨的檔名
+    var original = document.title;
+    document.title = '熊晏霆_Oliver_Hsiung_履歷';
+    window.addEventListener('afterprint', function restore() {
+      document.title = original;
+      window.removeEventListener('afterprint', restore);
+    });
     window.print();
   });
 </script>
