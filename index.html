@@ -61,7 +61,7 @@
 
   /* ---------- Header ---------- */
   header.hero {
-    display: grid; grid-template-columns: 1fr 132px; gap: 32px; align-items: center;
+    display: grid; grid-template-columns: 1fr 140px; gap: 32px; align-items: center;
     padding: 48px 56px 36px;
     border-top: 6px solid var(--accent);
   }
@@ -74,11 +74,11 @@
   .contact a:hover { color: var(--accent); border-color: var(--accent); }
 
   .photo {
-    width: 132px; height: 164px; border-radius: 4px; overflow: hidden;
+    width: 140px; height: 140px; border-radius: 4px; overflow: hidden;
     background: var(--accent-soft); display: grid; place-items: center;
     border: 1px solid var(--line);
   }
-  .photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; }
   .photo .initials { font-family: var(--serif); font-size: 36px; color: var(--accent); letter-spacing: .08em; }
 
   .summary {
@@ -87,7 +87,7 @@
   }
 
   .stats {
-    display: grid; grid-template-columns: repeat(4, 1fr);
+    display: grid; grid-template-columns: repeat(2, 1fr);
     margin: 28px 56px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
   }
   .stat { padding: 16px 12px; text-align: center; }
@@ -147,11 +147,9 @@
     .toolbar .hint { display: none; }
     .page { border-radius: 0; }
     header.hero { grid-template-columns: 1fr; padding: 32px 22px 24px; gap: 20px; }
-    .photo { order: -1; width: 104px; height: 130px; }
+    .photo { order: -1; width: 104px; height: 104px; }
     .summary { margin: 0 22px; }
-    .stats { margin: 22px 22px 0; grid-template-columns: repeat(2, 1fr); }
-    .stat:nth-child(3) { border-left: 0; }
-    .stat:nth-child(n+3) { border-top: 1px solid var(--line); }
+    .stats { margin: 22px 22px 0; }
     main { padding: 4px 22px 36px; }
     section.block { grid-template-columns: 1fr; gap: 12px; }
     .skills { grid-template-columns: 1fr; }
@@ -172,7 +170,7 @@
     .headline { font-size: 10.5pt; margin-top: 10px; }
     .contact { font-size: 9.5pt; margin-top: 8px; }
     .contact a { border-bottom: 0; }
-    .photo { width: 96px; height: 120px; }
+    .photo { width: 96px; height: 96px; }
     .summary { margin: 0; padding: 10px 14px; font-size: 10pt; }
     .stats { margin: 14px 0 0; }
     .stat { padding: 9px 6px; }
@@ -193,7 +191,6 @@
     dl.tools { grid-template-columns: 82px 1fr; gap: 4px 14px; margin-bottom: 12px; }
     .edu { margin-bottom: 8px; }
     h2, h3, .entry-head, .meta { break-after: avoid; page-break-after: avoid; }
-    .stats { grid-template-columns: repeat(4, 1fr); }
   }
 </style>
 </head>
@@ -217,8 +214,7 @@
       </ul>
     </div>
     <div class="photo">
-      <!-- 大頭照：將照片存為同資料夾的 photo.jpg -->
-      <img src="photo.jpg" alt="熊晏霆大頭照" onerror="this.remove(); document.querySelector('.photo').innerHTML='<span class=&quot;initials&quot;>OH</span>';">
+      <img src="photo.png" alt="熊晏霆大頭照" onerror="this.remove(); document.querySelector('.photo').innerHTML='<span class=&quot;initials&quot;>OH</span>';">
     </div>
   </header>
 
@@ -229,8 +225,6 @@
   <div class="stats" aria-label="重點成果">
     <div class="stat"><div class="num">8<small>年</small></div><div class="lbl">數位行銷經驗</div></div>
     <div class="stat"><div class="num">605<small>萬</small></div><div class="lbl">品牌路跑全案總觸及</div></div>
-    <div class="stat"><div class="num">2.6<small>倍</small></div><div class="lbl">LINE OA 好友成長</div></div>
-    <div class="stat"><div class="num">25,000</div><div class="lbl">飯店會員人數</div></div>
   </div>
 
   <main>
@@ -297,13 +291,11 @@
 
         <div class="entry">
           <div class="entry-head">
-            <h3>網站、SEO 與互動工具</h3>
+            <h3>網站與 SEO／AIO</h3>
           </div>
           <ul class="points">
-            <li>自己製作三菱重工除濕機產品頁和 AQUA 首賣活動頁，活動辦法用 popup 收進頁面，另外還有輪播 Banner。</li>
-            <li>用 Cloudflare 部署網站並切換網域，補上 HSTS 等資安標頭，也在網站委外合約加上弱點掃描與第三方元件清冊條款。</li>
-            <li>活動網站因為 noindex 設定沒辦法被搜尋引擎收錄，我自己找出原因並修好，再到 Search Console 重新提交。</li>
-            <li>做了客製化玻璃杯預覽工具，使用者上傳圖案就能即時合成到杯身，看到成品效果。</li>
+            <li>自行製作「空氣美學事務所」與 RIV 網站。</li>
+            <li>統籌所有網站的 SEO 與 AIO 優化。</li>
           </ul>
         </div>
       </div>
